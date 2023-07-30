@@ -1,0 +1,29 @@
+<%- include("header") -%>
+   <div class="main">
+      <div class="date">
+         <h1>
+            <%= listTitle %>
+         </h1>
+      </div>
+
+      <div class="f">
+         <% newListItems.forEach(function(item){ %>
+            <form action="/delete" method="post">
+            <div class="items">
+               <p> <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                  <i>
+                     <%=item.name%>
+                  </i>
+               </p>
+               <hr>
+            </div>
+            <input type="hidden" name="listName" value="<%=listTitle%>"></input>
+         </form>
+            <% }) %>
+                  <form action="/" method="post">
+                     <input class="n" type="text" name="newItem" placeholder="Add item">
+                     <button class="btn" type="submit" name="button" value="<%=listTitle%>">+</button>
+                  </form>
+      </div>
+   </div>
+   <%- include("footer") -%>

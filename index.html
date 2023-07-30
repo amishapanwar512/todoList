@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href=C:\Users\user\Desktop\WEB_DEVELOPMENT\todolist\views\css\style.css>
+</head>
+<body>
+    <div class="main">
+        <div class="date"><h1>date</h1></div>
+        
+        <div class="f">
+            <ul>
+
+                <!-- <li><%=newlist%></li> -->
+                <% for(var i=0;i<newlist.length;i++) {%>
+                   <li>
+                      <%= newlist[i] %>
+                   </li>
+                   <%}%>
+             </ul>
+             <form action="/" method="post">
+                <input class="n" type="text" name="newItem" placeholder="Add item">
+                <button class="btn" type="submit" name="button">+</button>
+             </form>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
